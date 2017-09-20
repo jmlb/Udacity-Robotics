@@ -1,0 +1,21 @@
+\contentsline {part}{I\hspace {1em}Introduction}{1}
+\contentsline {section}{\numberline {0.1}Definition}{2}
+\contentsline {subsubsection}{Motion planning}{2}
+\contentsline {subsubsection}{Expected Value}{2}
+\contentsline {section}{\numberline {0.2}Reinforcement Learning}{2}
+\contentsline {subsection}{\numberline {0.2.1}characteristic of Reinforcement Learning}{2}
+\contentsline {subsubsection}{Maze Example}{2}
+\contentsline {subsection}{\numberline {0.2.2}Categorizing RL Agents}{3}
+\contentsline {subsection}{\numberline {0.2.3}Sequential Decision Making}{3}
+\contentsline {subsection}{\numberline {0.2.4}Exploration versus Exploitation}{3}
+\contentsline {section}{\numberline {0.3}Markov Decision Process}{4}
+\contentsline {subsection}{\numberline {0.3.1}Parameters of an MDP}{4}
+\contentsline {subsubsection}{state $s \in S$ (finite size)}{4}
+\contentsline {subsubsection}{action: $a \in A$ (finite size)}{4}
+\contentsline {subsubsection}{Transition function or State Transition Matrix (\textit {aka} Model/Dynamics)}{4}
+\contentsline {subsubsection}{Reward function R}{4}
+\contentsline {subsubsection}{a start state: $s_0$}{5}
+\contentsline {subsubsection}{may be a terminal (absorbing) state}{5}
+\contentsline {subsection}{\numberline {0.3.2}Some Definitions}{5}
+\contentsline {subsubsection}{Return}{5}
+\contentsline {subsubsection}{Policy}{5}
