@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+
+import math
+import rospy #rospy is the official Python client library for ROS.
+from std_msgs.msg import Float64 #Float64, is one of the primitive message types in ROS
+
+def mover():
+    #two publishers are declared, one for joint 1 commands, and one for joint 2 commands.
+    pub_j1 = rospy.Publisher('/simple_arm/joint_1_position_controller/command',
+                             Float64, queue_size=10)
+    pub_j2 = rospy.Publisher('/simple_arm/joint_2_position_controller/command',
+                             Float64, queue_size=10)
+    #Initializes a client node and registers it with the master. 
+    #Here “arm_mover” is the name of the node. init_node() must be called before any other rospy package functions are called.
+    rospy.init_node('arm_mover', anonymous=True)
+    #The rate object is created here with a value of 10 Hertz. 
+    #Rates are used to limit the frequency at which certain loops spin in ROS
+    rate = rospy.Rate(10)
+    start_time = 0
+
+    while not start_time:
+        start_time = rospy.Time.now().to_sec()
+
+    while not rospy.is_shutdown():
+        '''
+         This the main loop. Due to the call to rate.sleep(), 
+         the loop is traversed at approximately 10 Hertz. Each trip through 
+         the body of the loop will result in two joint command messages being published. 
+         The joint angles are sampled from a sine wave with a period of 10 seconds, and 
+         in magnitude from [-pi/2, +pi/2]. When the node receives the signal to shut down 
+         (either from the master, or via SIGINT signal in a console window), the loop will be exited.
+        '''
+        elapsed = rospy.Time.now().to_sec() - start_time
+        pub_j1.publish(math.sin(2*math.pi*0.1*elapsed))
+        pub_j2.publish(math.sin(2*math.pi*0.1*elapsed))
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        mover()
+    #The try/except blocks here are significant as rospy uses exceptions extensively.
+    except rospy.ROSInterruptException:
+        pass
