@@ -1,6 +1,16 @@
 Linux_Roversim
 RoboND-Rover-Project/*.ogv
 my_notes
+RoboND-Perception-Project/write_up
+catkin_ws
 
+RoboND-Kinematic-Project/misc_images
+RoboND-Kinematic-Project/write_up
+RoboND-Kinematic-Project/UdacityReviews.pdf
+RoboND-Kinematic-Project/gazebo_grasp_plugin
+
+ros_utils
+chap4.pdf
+readme.md
 
 

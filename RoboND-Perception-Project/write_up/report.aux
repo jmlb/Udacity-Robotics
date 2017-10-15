@@ -1,0 +1,29 @@
+\relax 
+\providecommand\tcolorbox@label[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {0.1}Perception pipeline}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.1}Downsampling}{1}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/voxel.py}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.2}Filter noise}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Top image is the original point cloud, and bottom image is the point cloud after statistical outlier filtering.\relax }}{1}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/noise\textunderscore filter.py}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.3}Passthrough filter}{2}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/passthrough\textunderscore z.py}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces With a passthrough filter along z direction, there remains point clouds because related to the edges of the box (left and right). Those points can lead to erroneous recognition.\relax }}{2}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/passthrough\textunderscore z2.py}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.4}RANSAC}{3}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/ransac.py}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.5}Clustering (DBSCAN)}{3}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/clustering.py}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.1.6}Object Recognition}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Create features}{5}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/features.py}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Train model}{5}}
+\@writefile{lol}{\contentsline {lstlisting}{codes/gridsearch.py}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Normalized Confusion matrix for 3 objects (test1). The model has an accuracy of 96.89\%\relax }}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Normalized Confusion matrix for 5 objects (test2). The model has an accuracy of 92.78\%\relax }}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Normalized Confusion matrix for 8 objects (test3). The model has an accuracy of 93\%\relax }}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.2}Pipeline in action}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 3 out of 3 objects correctly identified\relax }}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 5 out of 5 objects correctly identified\relax }}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 6 out of 8 objects correctly identified. The model cannot separate the glue and the book, and merged into a single cluster that it labels erroneously as soap.\relax }}{8}}
